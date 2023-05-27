@@ -1,7 +1,17 @@
+import { Component } from 'react';
+
 import './app-filter.css';
 
-const AppFilter = () => {
-    return(
+class AppFilter extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            filtered: ''
+        }
+    }
+
+    render() {
+           return(
         <div className="btn-group">
            <button 
                 className="btn btn-light"
@@ -19,7 +29,8 @@ const AppFilter = () => {
                     З/П больше 1000
            </button>
         </div>
-    )
+    ) 
+    }
 }
 
 export default AppFilter;
